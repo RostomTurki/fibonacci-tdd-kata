@@ -20,7 +20,7 @@
     },
     {
       "id": "Waqm",
-      "code_hash": "0075301f135f1c0fb73a046255462c07",
+      "code_hash": "9c8ae55e1bf5bc18d7275c65509e7aca",
       "outputs": [
         {
           "type": "data",
@@ -46,7 +46,7 @@
         {
           "type": "stream",
           "name": "stdout",
-          "text": "\u001b[31mF\u001b[0m\u001b[31mF\u001b[0m\u001b[31mF\u001b[0m\u001b[31mF\u001b[0m\u001b[31m                                                                     [100%]\u001b[0m\n================================== FAILURES ===================================\n\u001b[31m\u001b[1m______________________________ test_fibonacci_0 _______________________________\u001b[0m\n\n    def test_fibonacci_0():\n>       assert fibonacci(0) == 0\n\u001b[1m\u001b[31mE       assert None == 0\u001b[0m\n\u001b[1m\u001b[31mE        +  where None = fibonacci(0)\u001b[0m\n\n\u001b[1m\u001b[31mmarimo://notebook.py#cell_id=LBNt\u001b[0m:2: AssertionError\n\u001b[31m\u001b[1m______________________________ test_fibonacci_1 _______________________________\u001b[0m\n\n    def test_fibonacci_1():\n>       assert fibonacci(1) == 1\n\u001b[1m\u001b[31mE       assert None == 1\u001b[0m\n\u001b[1m\u001b[31mE        +  where None = fibonacci(1)\u001b[0m\n\n\u001b[1m\u001b[31mmarimo://notebook.py#cell_id=LBNt\u001b[0m:5: AssertionError\n\u001b[31m\u001b[1m______________________________ test_fibonacci_5 _______________________________\u001b[0m\n\n    def test_fibonacci_5():\n>       assert fibonacci(5) == 5\n\u001b[1m\u001b[31mE       assert None == 5\u001b[0m\n\u001b[1m\u001b[31mE        +  where None = fibonacci(5)\u001b[0m\n\n\u001b[1m\u001b[31mmarimo://notebook.py#cell_id=LBNt\u001b[0m:8: AssertionError\n\u001b[31m\u001b[1m______________________________ test_fibonacci_10 ______________________________\u001b[0m\n\n    def test_fibonacci_10():\n>       assert fibonacci(10) == 55\n\u001b[1m\u001b[31mE       assert None == 55\u001b[0m\n\u001b[1m\u001b[31mE        +  where None = fibonacci(10)\u001b[0m\n\n\u001b[1m\u001b[31mmarimo://notebook.py#cell_id=LBNt\u001b[0m:11: AssertionError\n================================== Overview ===================================\n\nSummary:\nTotal: 4, Passed: 0, Failed: 4, Errors: 0, Skipped: 0\n\u001b[36m\u001b[1m=========================== short test summary info ===========================\u001b[0m\n\u001b[31mFAILED\u001b[0m notebook.py::\u001b[1mtest_fibonacci_0\u001b[0m - assert None == 0\n\u001b[31mFAILED\u001b[0m notebook.py::\u001b[1mtest_fibonacci_1\u001b[0m - assert None == 1\n\u001b[31mFAILED\u001b[0m notebook.py::\u001b[1mtest_fibonacci_5\u001b[0m - assert None == 5\n\u001b[31mFAILED\u001b[0m notebook.py::\u001b[1mtest_fibonacci_10\u001b[0m - assert None == 55\n",
+          "text": "\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m                                                                     [100%]\u001b[0m\n================================== Overview ===================================\nPassed Tests:\n\u001b[1m\u001b[32m\u001b[22m\u2713\u001b[0m\u001b[0m notebook.py::test_fibonacci_0\n\u001b[1m\u001b[32m\u001b[22m\u2713\u001b[0m\u001b[0m notebook.py::test_fibonacci_1\n\u001b[1m\u001b[32m\u001b[22m\u2713\u001b[0m\u001b[0m notebook.py::test_fibonacci_5\n\u001b[1m\u001b[32m\u001b[22m\u2713\u001b[0m\u001b[0m notebook.py::test_fibonacci_10\n\nSummary:\nTotal: 4, Passed: 4, Failed: 0, Errors: 0, Skipped: 0\n",
           "mimetype": "text/plain"
         }
       ]
