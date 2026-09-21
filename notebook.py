@@ -41,8 +41,7 @@ def _(mo):
 
 
 @app.cell
-def _(fibonacci, mo):
-    mo.md("""test units for the fibonacci function""")
+def _(fibonacci):
     def test_fibonacci_0():
         assert fibonacci(0) == 0
 
@@ -66,9 +65,14 @@ def _():
 
 @app.cell
 def _(fibonacci, mo, n):
-    mo.md(
-        f"### Fibonacci({n}) = {fibonacci(n)}"
-    )
+    mo.md(f"""
+    ### Fibonacci({n}) = {fibonacci(n)}
+    """)
+    return
+
+
+@app.cell
+def _():
     return
 
 
