@@ -1,0 +1,94 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.24.2",
+    "script_metadata_hash": null
+  },
+  "cells": [
+    {
+      "id": "HFHm",
+      "code_hash": "0171b36e017e9f66a58446ce64a208d4",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"fibonacci-numbers\">Fibonacci Numbers</h1>\n<span class=\"paragraph\">The Fibonacci sequence is defined as:</span>\n<span class=\"paragraph\">F(0) = 0\nF(1) = 1\nF(n) = F(n-1) + F(n-2) for n &gt; 1</span>\n<span class=\"paragraph\">This notebook implements a function to compute the nth Fibonacci number and verifies its behavior with tests.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Hbol",
+      "code_hash": "b03ae3d1a8c7e35b57a5d71425064bb8",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Waqm",
+      "code_hash": "99d0ba69d09a47f35cd0c4bb07d8531a",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "LBNt",
+      "code_hash": "3e74d9ad5f370458b3c9851134711d4a",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "CbyB",
+      "code_hash": "3f100dae5a1c63aa8ec45ec7a308bc43",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": " 10\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "eFJh",
+      "code_hash": "7d26d36276b379ccd0f98465e3fac7c9",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"fibonacci10-55\">Fibonacci(10) = 55</h3></span>"
+          }
+        }
+      ],
+      "console": []
+    }
+  ]
+}
