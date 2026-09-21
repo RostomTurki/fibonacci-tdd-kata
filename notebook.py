@@ -42,7 +42,6 @@ def _(mo):
 
 @app.cell
 def _(fibonacci, mo):
-    mo.md("""test units for the fibonacci function""")
     def test_fibonacci_0():
         assert fibonacci(0) == 0
 
