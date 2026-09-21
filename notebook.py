@@ -17,5 +17,27 @@ def fibonacci(n: int) -> int:
     pass
 
 
+@app.cell
+def _():
+    def test_fibonacci_0():
+        assert fibonacci(0) == 0
+
+    def test_fibonacci_1():
+        assert fibonacci(1) == 1
+
+    def test_fibonacci_5():
+        assert fibonacci(5) == 5
+
+    def test_fibonacci_10():
+        assert fibonacci(10) == 55
+
+    return
+
+
+@app.cell
+def _():
+    return
+
+
 if __name__ == "__main__":
     app.run()
