@@ -6,7 +6,7 @@
   },
   "cells": [
     {
-      "id": "HFHm",
+      "id": "Hbol",
       "code_hash": "0171b36e017e9f66a58446ce64a208d4",
       "outputs": [
         {
@@ -19,8 +19,8 @@
       "console": []
     },
     {
-      "id": "Hbol",
-      "code_hash": "b03ae3d1a8c7e35b57a5d71425064bb8",
+      "id": "MJUe",
+      "code_hash": "6f40f30abab5849aaf986862372ee9b3",
       "outputs": [
         {
           "type": "data",
@@ -32,8 +32,8 @@
       "console": []
     },
     {
-      "id": "Waqm",
-      "code_hash": "99d0ba69d09a47f35cd0c4bb07d8531a",
+      "id": "vblA",
+      "code_hash": "e2c7ad4efecb84415064f4184881de8e",
       "outputs": [
         {
           "type": "data",
@@ -45,8 +45,8 @@
       "console": []
     },
     {
-      "id": "LBNt",
-      "code_hash": "3e74d9ad5f370458b3c9851134711d4a",
+      "id": "bkHC",
+      "code_hash": "4db865049f4c61b2d18afa5b96c6d4da",
       "outputs": [
         {
           "type": "data",
@@ -55,10 +55,17 @@
           }
         }
       ],
-      "console": []
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m                                                                  [100%]\u001b[0m\n================================== Overview ===================================\nPassed Tests:\n\u001b[1m\u001b[32m\u001b[22m\u2713\u001b[0m\u001b[0m notebook.py::test_fibonacci_0\n\u001b[1m\u001b[32m\u001b[22m\u2713\u001b[0m\u001b[0m notebook.py::test_fibonacci_1\n\u001b[1m\u001b[32m\u001b[22m\u2713\u001b[0m\u001b[0m notebook.py::test_fibonacci_5\n\u001b[1m\u001b[32m\u001b[22m\u2713\u001b[0m\u001b[0m notebook.py::test_fibonacci_10\n\u001b[1m\u001b[32m\u001b[22m\u2713\u001b[0m\u001b[0m notebook.py::test_fibonacci_20\n\u001b[1m\u001b[32m\u001b[22m\u2713\u001b[0m\u001b[0m notebook.py::test_fibonacci_30\n\u001b[1m\u001b[32m\u001b[22m\u2713\u001b[0m\u001b[0m notebook.py::test_fibonacci_10__7\n\nSummary:\nTotal: 7, Passed: 7, Failed: 0, Errors: 0, Skipped: 0\n",
+          "mimetype": "text/plain"
+        }
+      ]
     },
     {
-      "id": "CbyB",
+      "id": "lEQa",
       "code_hash": "3f100dae5a1c63aa8ec45ec7a308bc43",
       "outputs": [
         {
@@ -72,19 +79,52 @@
         {
           "type": "stream",
           "name": "stdout",
-          "text": " 10\n",
+          "text": " 100\n",
           "mimetype": "text/plain"
         }
       ]
     },
     {
-      "id": "eFJh",
-      "code_hash": "7d26d36276b379ccd0f98465e3fac7c9",
+      "id": "PKri",
+      "code_hash": "7101d84866ca3ccb57933eb351f4d9dd",
       "outputs": [
         {
           "type": "data",
           "data": {
-            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"fibonacci10-55\">Fibonacci(10) = 55</h3></span>"
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"fibonacci100-354224848179261915075\">Fibonacci(100) = 354224848179261915075</h3></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "aXen",
+      "code_hash": "f4a733d79b328681d40a41f4086e9b1b",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "maximum recursion depth exceeded",
+          "traceback": null
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "<span class=\"codehilite\"><div class=\"highlight\"><pre><span></span><span class=\"gt\">Traceback (most recent call last):</span>\n  File <span class=\"nb\">\"C:\\Users\\rosto\\AppData\\Local\\Temp\\marimo_11768\\__marimo__cell_aXen_.py\"</span>, line <span class=\"m\">1</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"w\">    </span><span class=\"n\">fibonacci</span><span class=\"p\">(</span><span class=\"mi\">10</span><span class=\"o\">**</span><span class=\"mi\">7</span><span class=\"p\">)</span>\n  File <span class=\"nb\">\"C:\\Users\\rosto\\AppData\\Local\\Temp\\marimo_11768\\__marimo__cell_vblA_.py\"</span>, line <span class=\"m\">7</span>, in <span class=\"n\">fibonacci</span>\n<span class=\"w\">    </span><span class=\"k\">return</span> <span class=\"n\">fibonacci</span><span class=\"p\">(</span><span class=\"n\">n</span> <span class=\"o\">-</span> <span class=\"mi\">1</span><span class=\"p\">)</span> <span class=\"o\">+</span> <span class=\"n\">fibonacci</span><span class=\"p\">(</span><span class=\"n\">n</span> <span class=\"o\">-</span> <span class=\"mi\">2</span><span class=\"p\">)</span>\n<span class=\"w\">           </span><span class=\"pm\">^^^^^^^^^^^^^^^^</span>\n  File <span class=\"nb\">\"C:\\Users\\rosto\\AppData\\Local\\Temp\\marimo_11768\\__marimo__cell_vblA_.py\"</span>, line <span class=\"m\">7</span>, in <span class=\"n\">fibonacci</span>\n<span class=\"w\">    </span><span class=\"k\">return</span> <span class=\"n\">fibonacci</span><span class=\"p\">(</span><span class=\"n\">n</span> <span class=\"o\">-</span> <span class=\"mi\">1</span><span class=\"p\">)</span> <span class=\"o\">+</span> <span class=\"n\">fibonacci</span><span class=\"p\">(</span><span class=\"n\">n</span> <span class=\"o\">-</span> <span class=\"mi\">2</span><span class=\"p\">)</span>\n<span class=\"w\">           </span><span class=\"pm\">^^^^^^^^^^^^^^^^</span>\n  File <span class=\"nb\">\"C:\\Users\\rosto\\AppData\\Local\\Temp\\marimo_11768\\__marimo__cell_vblA_.py\"</span>, line <span class=\"m\">7</span>, in <span class=\"n\">fibonacci</span>\n<span class=\"w\">    </span><span class=\"k\">return</span> <span class=\"n\">fibonacci</span><span class=\"p\">(</span><span class=\"n\">n</span> <span class=\"o\">-</span> <span class=\"mi\">1</span><span class=\"p\">)</span> <span class=\"o\">+</span> <span class=\"n\">fibonacci</span><span class=\"p\">(</span><span class=\"n\">n</span> <span class=\"o\">-</span> <span class=\"mi\">2</span><span class=\"p\">)</span>\n<span class=\"w\">           </span><span class=\"pm\">^^^^^^^^^^^^^^^^</span>\n<span class=\"gr\">  [Previous line repeated 994 more times]</span>\n<span class=\"gr\">RecursionError</span>: <span class=\"n\">maximum recursion depth exceeded</span>\n</pre></div>\n</span>",
+          "mimetype": "application/vnd.marimo+traceback"
+        }
+      ]
+    },
+    {
+      "id": "tvMb",
+      "code_hash": null,
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
           }
         }
       ],

@@ -23,26 +23,26 @@ def _(mo):
 @app.cell
 def _():
     import marimo as mo
+    import pytest
 
-    return (mo,)
+    return mo, pytest
 
 
 @app.cell
-def _(mo):
-    def fibonacci(n: int) -> int:
-        mo.md(r"""this function represents the logi of fibonacci""")
-        #returns 0 if n==0 and 1 if n==1
+def _():
+    from functools import lru_cache
+    #optimized version using cache
+    @lru_cache(None)
+    def fibonacci(n):
         if n <= 1:
             return n
-        #recursive method to compute a fibonacci number
-        return fibonacci(n-1) + fibonacci(n-2)
+        return fibonacci(n - 1) + fibonacci(n - 2)
 
     return (fibonacci,)
 
 
 @app.cell
-def _(fibonacci, mo):
-    mo.md("""test units for the fibonacci function""")
+def _(fibonacci, pytest):
     def test_fibonacci_0():
         assert fibonacci(0) == 0
 
@@ -55,6 +55,17 @@ def _(fibonacci, mo):
     def test_fibonacci_10():
         assert fibonacci(10) == 55
 
+    def test_fibonacci_20():
+        assert fibonacci(20) == 6765
+
+
+    def test_fibonacci_30():
+        assert fibonacci(30) == 832040 
+
+    def test_fibonacci_10__7():
+         with pytest.raises(RecursionError):
+            fibonacci(10**7)
+
     return
 
 
@@ -66,9 +77,20 @@ def _():
 
 @app.cell
 def _(fibonacci, mo, n):
-    mo.md(
-        f"### Fibonacci({n}) = {fibonacci(n)}"
-    )
+    mo.md(f"""
+    ### Fibonacci({n}) = {fibonacci(n)}
+    """)
+    return
+
+
+@app.cell
+def _(fibonacci):
+    fibonacci(10**7)
+    return
+
+
+@app.cell
+def _():
     return
 
 
