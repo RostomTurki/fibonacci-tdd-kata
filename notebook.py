@@ -70,27 +70,29 @@ def _(mo):
 
 
 @app.cell
-def _(fibonacci):
-    def test_fibonacci_0():
-        assert fibonacci(0) == 0
+def _():
+    import pytest
 
-    def test_fibonacci_1():
-        assert fibonacci(1) == 1
-
-    def test_fibonacci_5():
-        assert fibonacci(5) == 5
-
-    def test_fibonacci_10():
-        assert fibonacci(10) == 55
-
-    def test_fibonacci_20():
-        assert fibonacci(20) == 6765
+    from fibonacci_kata.core import fibonacci
 
 
-    def test_fibonacci_30():
-        assert fibonacci(30) == 832040
+    @pytest.mark.parametrize(
+        ("n", "expected"),
+        [
+            (0, 0),
+            (1, 1),
+            (2, 1),
+            (5, 5),
+            (10, 55),
+            (50, 12586269025),
+            (100, 354224848179261915075),
+            (200, 280571172992510140037611932413038677189525),
+        ],
+    )
+    def test_cases(n, expected):
+        assert fibonacci(n) == expected
 
-    return
+    return (fibonacci,)
 
 
 @app.cell(hide_code=True)
