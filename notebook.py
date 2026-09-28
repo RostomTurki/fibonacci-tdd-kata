@@ -20,28 +20,57 @@ def _(mo):
     return
 
 
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ## Imports
+    """)
+    return
+
+
 @app.cell
 def _():
     import marimo as mo
-
+    import pytest
+    import sys
+    sys.set_int_max_str_digits(10000000)
     return (mo,)
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
-    def fibonacci(n: int) -> int:
-        mo.md(r"""this function represents the logi of fibonacci""")
-        #returns 0 if n==0 and 1 if n==1
+    mo.md(r"""
+    ## Fibonacci Fucntion
+    """)
+    return
+
+
+@app.cell
+def _():
+    from functools import lru_cache
+    #optimized version using cache
+    @lru_cache(None)
+    def fibonacci(n: int):
+        a, b = 0, 1
         if n <= 1:
             return n
-        #recursive method to compute a fibonacci number
-        return fibonacci(n-1) + fibonacci(n-2)
+        for _ in range(n):
+            a, b = b, a + b
+        return a
 
     return (fibonacci,)
 
 
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ## Tests
+    """)
+    return
+
+
 @app.cell
-def _(fibonacci, mo):
+def _(fibonacci):
     def test_fibonacci_0():
         assert fibonacci(0) == 0
 
@@ -54,6 +83,21 @@ def _(fibonacci, mo):
     def test_fibonacci_10():
         assert fibonacci(10) == 55
 
+    def test_fibonacci_20():
+        assert fibonacci(20) == 6765
+
+
+    def test_fibonacci_30():
+        assert fibonacci(30) == 832040
+
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ## Widget
+    """)
     return
 
 
@@ -65,9 +109,9 @@ def _():
 
 @app.cell
 def _(fibonacci, mo, n):
-    mo.md(
-        f"### Fibonacci({n}) = {fibonacci(n)}"
-    )
+    mo.md(f"""
+    #### Fibonacci({n}) = {fibonacci(n)}
+    """)
     return
 
 
