@@ -20,12 +20,29 @@ def _(mo):
     return
 
 
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ## Imports
+    """)
+    return
+
+
 @app.cell
 def _():
     import marimo as mo
     import pytest
+    import sys
+    sys.set_int_max_str_digits(10000000)
+    return (mo,)
 
-    return mo, pytest
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ## Fibonacci Fucntion
+    """)
+    return
 
 
 @app.cell
@@ -33,16 +50,27 @@ def _():
     from functools import lru_cache
     #optimized version using cache
     @lru_cache(None)
-    def fibonacci(n):
+    def fibonacci(n: int):
+        a, b = 0, 1
         if n <= 1:
             return n
-        return fibonacci(n - 1) + fibonacci(n - 2)
+        for _ in range(n):
+            a, b = b, a + b
+        return a
 
     return (fibonacci,)
 
 
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ## Tests
+    """)
+    return
+
+
 @app.cell
-def _(fibonacci, pytest):
+def _(fibonacci):
     def test_fibonacci_0():
         assert fibonacci(0) == 0
 
@@ -60,12 +88,16 @@ def _(fibonacci, pytest):
 
 
     def test_fibonacci_30():
-        assert fibonacci(30) == 832040 
+        assert fibonacci(30) == 832040
 
-    def test_fibonacci_10__7():
-         with pytest.raises(RecursionError):
-            fibonacci(10**7)
+    return
 
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ## Widget
+    """)
     return
 
 
@@ -78,19 +110,8 @@ def _():
 @app.cell
 def _(fibonacci, mo, n):
     mo.md(f"""
-    ### Fibonacci({n}) = {fibonacci(n)}
+    #### Fibonacci({n}) = {fibonacci(n)}
     """)
-    return
-
-
-@app.cell
-def _(fibonacci):
-    fibonacci(10**7)
-    return
-
-
-@app.cell
-def _():
     return
 
 
