@@ -148,6 +148,12 @@
         }
       ],
       "console": []
+    },
+    {
+      "id": "ntTr",
+      "code_hash": null,
+      "outputs": [],
+      "console": []
     }
   ]
 }
