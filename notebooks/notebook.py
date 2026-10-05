@@ -30,9 +30,10 @@ def _(mo):
 
 @app.cell
 def _():
-    import marimo as mo
-    import pytest
     import sys
+
+    import marimo as mo
+
     sys.set_int_max_str_digits(10000000)
     return (mo,)
 
@@ -48,7 +49,8 @@ def _(mo):
 @app.cell
 def _():
     from functools import lru_cache
-    #optimized version using cache
+
+    # optimized version using cache
     @lru_cache(None)
     def fibonacci(n: int):
         a, b = 0, 1
@@ -74,7 +76,6 @@ def _():
     import pytest
 
     from fibonacci_kata.core import fibonacci
-
 
     @pytest.mark.parametrize(
         ("n", "expected"),
