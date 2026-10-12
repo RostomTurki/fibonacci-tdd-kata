@@ -20,11 +20,12 @@ packages = ["src/fibonacci_kata"]
 # Development-only dependencies used for testing, linting and notebooks.
 [dependency-groups]
 dev = [
-    "marimo>=0.24.2",  # Interactive Python notebooks
-    "matplotlib>=3.11.2",  # Data visualisation and plotting
-    "mypy>=2.4.0",  # Static type checking
-    "pytest>=9.1.1",  # Automated testing
-    "ruff>=0.16.8",  # Linting and code formatting
+    "marimo>=0.24.2", # Interactive Python notebooks
+    "matplotlib>=3.11.2", # Data visualisation and plotting
+    "mypy>=2.4.0", # Static type checking
+    "pytest>=9.1.1", # Automated testing
+    "pytest-cov>=7.1.0",
+    "ruff>=0.16.8", # Linting and code formatting
 ]
 
 # Configure pytest to locate the source code and test files.
