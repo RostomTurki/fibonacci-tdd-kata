@@ -1,27 +1,63 @@
 [project]
-name = "fibonacci-tdd-kata"
-version = "0.1.0"
+name = "fibonacci-tdd-kata"  # Package name
+version = "0.1.0"  # Initial package version
 description = "A TDD kata: Fibonacci, from notebook exploration to a tested, published package"
-readme = "README.md"
-requires-python = ">=3.12"
-license = { text = "MIT" }
+readme = "README.md"  # Project documentation
+requires-python = ">=3.12"  # Minimum supported Python version
+license = { text = "MIT" }  # Project licence
 authors = [{ name = "Rostom Turki", email = "rostom.turki.etu@univ-lille.fr" }]
-dependencies = []
+dependencies = []  # Runtime dependencies
 
+# Define how the package is built and which build tool is used.
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
+# Specify the source package included in the built wheel.
 [tool.hatch.build.targets.wheel]
 packages = ["src/fibonacci_kata"]
 
+# Development-only dependencies used for testing, linting and notebooks.
 [dependency-groups]
 dev = [
-    "marimo>=0.24.2",
-    "pytest>=9.1.1",
-    "ruff>=0.16.8",
+    "marimo>=0.24.2",  # Interactive Python notebooks
+    "matplotlib>=3.11.2",  # Data visualisation and plotting
+    "mypy>=2.4.0",  # Static type checking
+    "pytest>=9.1.1",  # Automated testing
+    "ruff>=0.16.8",  # Linting and code formatting
 ]
 
+# Configure pytest to locate the source code and test files.
 [tool.pytest.ini_options]
 pythonpath = ["src"]
 testpaths = ["tests"]
+
+# General Ruff configuration.
+[tool.ruff]
+line-length = 100  # Maximum line length
+target-version = "py311"  # Python version targeted by Ruff
+
+# Enable selected linting rules.
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]  # Style, errors, imports, upgrades and bugbear
+
+# Ignore B018 in Marimo notebooks because bare expressions display cell outputs.
+[tool.ruff.lint.per-file-ignores]
+"notebooks/*.py" = ["B018"]
+
+# Configure strict static type checking for the source package.
+[tool.mypy]
+strict = true
+files = ["src"]
+
+# Configure code coverage measurement and reporting.
+[tool.coverage.run]
+source = ["src"]
+
+[tool.coverage.report]
+show_missing = true  # Display lines not covered by tests
+fail_under = 90  # Require at least 90% test coverage
+
+# Register the CLI entry point so the package can be run as a command.
+[project.scripts]
+fibonacci-kata = "fibonacci_kata.cli:main"
