@@ -15,7 +15,7 @@ def _(mo):
     F(1) = 1
     F(n) = F(n-1) + F(n-2) for n > 1
 
-    This notebook implements a function to compute the nth Fibonacci number and verifies its behavior with tests.
+    This notebook implements a function to compute the nth Fibonacci number.
     """)
     return
 
