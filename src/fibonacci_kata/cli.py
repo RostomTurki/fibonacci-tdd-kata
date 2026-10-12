@@ -1,5 +1,6 @@
 # src/fibonacci_kata/cli.py
 """Command-line interface for fibonacci_kata."""
+
 import argparse
 
 from fibonacci_kata.core import fibonacci
@@ -10,12 +11,16 @@ def build_parser() -> argparse.ArgumentParser:
         prog="fibonacci-kata",
         description="Print the Fibonacci value for one number, or a range of numbers.",
     )
-    parser.add_argument("n", type=int, nargs="?", 
+    parser.add_argument(
+        "n",
+        type=int,
+        nargs="?",
         help="A single number to convert (ignored if --start/--end are given).",
     )
     parser.add_argument("--start", type=int, help="Start of a range (inclusive).")
     parser.add_argument("--end", type=int, help="End of a range (inclusive).")
     return parser
+
 
 def main() -> None:
     parser = build_parser()
@@ -28,5 +33,6 @@ def main() -> None:
     else:
         parser.error("Provide either a single number, or --start and --end.")
 
+
 if __name__ == "__main__":
-    main()  
+    main()
