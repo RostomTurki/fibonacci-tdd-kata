@@ -1,8 +1,7 @@
 # tests/test_cli.py
 import pytest
 
-from fibonacci_kata.cli import build_parser
-from main import main
+from fibonacci_kata.cli import build_parser, main
 
 
 def test_parser_accepts_single_number():
@@ -26,7 +25,7 @@ def test_main_prints_range(monkeypatch, capsys):
     monkeypatch.setattr("sys.argv", ["fibonacci-kata", "--start", "1", "--end", "5"])
     main()
     lines = capsys.readouterr().out.strip().splitlines()
-    assert lines == ["1", "2", "Fibo", "4", "Nacci"]
+    assert lines == ["1", "1", "2", "3", "5"]
 
 
 def test_main_requires_an_argument(monkeypatch):
