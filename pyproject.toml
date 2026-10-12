@@ -35,7 +35,7 @@ testpaths = ["tests"]
 # General Ruff configuration.
 [tool.ruff]
 line-length = 100  # Maximum line length
-target-version = "py311"  # Python version targeted by Ruff
+target-version = "py312"  # Python version targeted by Ruff
 
 # Enable selected linting rules.
 [tool.ruff.lint]
