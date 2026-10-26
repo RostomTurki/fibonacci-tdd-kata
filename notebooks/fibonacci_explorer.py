@@ -1,3 +1,5 @@
+import sys
+
 import marimo
 
 __generated_with = "0.24.2"
@@ -56,6 +58,16 @@ def _(results):
     fig
     return
 
+@app.cell
+async def _():
+    import sys
+    if sys.platform == "emscripten":
+        import micropip
+        from js import location
+        base = location.href.split("?")[0].split("#")[0].rsplit("/", 1)[0]
+        await micropip.install(f"{base}/public/fibonacci_kata-0.1.0-py3-none-any.whl")
+    from fibonacci_kata import fibonacci
+    return (fibonacci,)
 
 @app.cell
 def _():
